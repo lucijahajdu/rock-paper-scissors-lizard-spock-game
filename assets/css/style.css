@@ -23,7 +23,7 @@ body {
     border: none;
     margin: 1%;
     padding: 0.3%;
-    font-size: 100%;
+    font-size: 150%;
   }
 
   .restart-btn:hover {
@@ -43,3 +43,13 @@ body {
   .button:hover {
     background-color: #71c5c1;
   }
+
+  .score-area {
+    margin: auto;
+    padding: 2%;
+    width: 30%;
+    font-size: 180%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
