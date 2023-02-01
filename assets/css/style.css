@@ -16,3 +16,17 @@ body {
     display:block;
     width: 100%;
 }
+
+.restart-btn {
+    color: #333;
+    background-color: #71c5c1;
+    border: none;
+    margin: 1%;
+    padding: 0.3%;
+    font-size: 100%;
+  }
+
+  .restart-btn:hover {
+    background: #043d5e;
+    color: #fff;
+  }
