@@ -53,3 +53,10 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
  
+  footer{
+    text-align: center;
+    font-size: 150%;
+    background-color: #71c5c1;
+    padding: 2%;
+   margin-top: 2%;
+  }
