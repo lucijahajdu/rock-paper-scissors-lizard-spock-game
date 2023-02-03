@@ -20,9 +20,23 @@ const hands = [{
     name: 'spock',
     beats: ['rock', 'scissors']
 }
-]
+];
 // When the user clicks the button, we need to get the value of the button
+
+
+for (let button of buttons) {
+    button.addEventListener('click', function(){
+        let playerGuess = hands.find((hand)=> hand.name === button.value);
+        let computerGuess = getComputerGuess();
+        console.log(playerGuess, computerGuess);
+        compare(playerGuess, computerGuess)
+    });
+};
+
+
 // Let the computer guess
+
+
 // Compare the players and computers choice
 // If computer wins, add to the computers score
 // If player wins, add to the players score
