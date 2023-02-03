@@ -37,7 +37,7 @@ for (let button of buttons) {
 // Let the computer guess
 
 function getComputerGuess() {
-    const randomNumber = Math.floor(Math.random() * 5) + 1
+    const randomNumber = hands[Math.floor(Math.random() * 5) + 1]
 
     if (randomNumber === 1) {
         computerGuess = 'rock'
@@ -59,6 +59,32 @@ function getComputerGuess() {
     
 
 // Compare the players and computers choice
+
+function compare(playerGuess, computerGuess) {
+    console.log(playerGuess, computerGuess);
+    if (computerGuess === playerGuess) {
+        alert = 'Tie!'
+    } else if (playerGuess === 'rock') {
+        if (computerGuess === 'paper') {
+          return 'computer';
+        } else {
+          return 'player';
+        }
+      } else if (playerGuess === 'paper') {
+        if (computerGuess === 'scissors') {
+          return 'computer';
+        } else {
+          return 'player';
+        }
+      } else if (playerGuess === 'scissors') {
+        if (computerGuess === 'rock') {
+          return 'computer';
+        } else {
+          return 'player';
+        } 
+      } 
+      }
+}
 // If computer wins, add to the computers score
 // If player wins, add to the players score
 // If it is a tie we do nothing
