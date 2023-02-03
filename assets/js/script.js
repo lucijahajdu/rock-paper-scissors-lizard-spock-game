@@ -36,6 +36,27 @@ for (let button of buttons) {
 
 // Let the computer guess
 
+function getComputerGuess() {
+    const randomNumber = Math.floor(Math.random() * 5) + 1
+
+    if (randomNumber === 1) {
+        computerGuess = 'rock'
+      }
+      if (randomNumber === 2) {
+        computerGuess = 'scissors'
+      }
+      if (randomNumber === 3) {
+        computerChoice = 'paper'
+      }
+      if (randomNumber === 4) {
+        computerGuess = 'lizard'
+      }
+      if (randomNumber === 5) {
+        computerChoice = 'spock'
+      }
+
+    }
+    
 
 // Compare the players and computers choice
 // If computer wins, add to the computers score
