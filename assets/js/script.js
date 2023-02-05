@@ -5,7 +5,8 @@ const computerScoreDisplay = document.getElementById('computerScore');
 const resultArea = document.getElementById('result');
 const outcome = document.getElementById('outcome');
 const icon = document.getElementById('icon');
-const computerOutcome = document.getElementById('computerHand')
+const computerOutcome = document.getElementById('computerHand');
+
 
 const hands = [{
     name: 'rock',
@@ -35,8 +36,8 @@ const hands = [{
 ];
 // When the user clicks the button, we need to get the value of the button
 
-let playerScore = 0;
-let computerScore = 0;
+let playerScore = '';
+let computerScore = '';
 
 
 for (let button of buttons) {
@@ -45,6 +46,8 @@ for (let button of buttons) {
         let computerGuess = getComputerGuess();
         console.log(playerGuess.name, computerGuess.name);
         let compareGuess = compare(playerGuess, computerGuess);
+        
+        
 
         setResult(playerGuess.icon, computerGuess.hand, compareGuess)
         updateScore(compareGuess)
@@ -71,26 +74,31 @@ function getComputerGuess() {
 
 function compare(playerGuess, computerGuess) {
     let result = '';
+
     if (playerGuess.name === computerGuess.name){
-      result = 'tie'
+      result = 'tie';
     } else if (playerGuess.beats.includes(computerGuess.name)){
-      result = 'player wins'
+      result = 'player';
     } else {
-      result = 'computer wins'
+      result = 'computer';
     }
 
     return result;
-}
+};
+
+
+
 // If computer wins, add to the computers score
 // If player wins, add to the players score
 // If it is a tie we do nothing
 // Update the score
 
+
 function updateScore(winner) {
-  if(winner === 'player') {
+  if (winner === 'player') {
     playerScore++;
     playerScoreDisplay.innerText = playerScore;
-  } else if (winner ==='computer') {
+  } else if (winner === 'computer') {
     computerScore++;
     computerScoreDisplay.innerText = computerScore;
   }
@@ -98,9 +106,13 @@ function updateScore(winner) {
 }
 // If player has a score 10 we have a winner
 // Allow the user to reset the game
+let playerIcon = '';
+let computerChoice = '';
+let result = '';
+
 function setResult(playerIcon, computerChoice, result) {
-  icon.innerHTML = `<i class="${playerIcon}"></i>`
-  computerOutcome.innerText = `Computer chose ${computerChoice}`
-  outcome.innerText = `${result} wins!`
+  icon.innerHTML = `<i class="${playerIcon}"></i>`;
+  computerOutcome.innerText = `Computer chose ${computerChoice}`;
+  outcome.innerText = `${result} wins!`;
 }
 
