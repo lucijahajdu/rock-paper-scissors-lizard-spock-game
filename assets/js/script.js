@@ -34,14 +34,22 @@ const hands = [{
 ];
 // When the user clicks the button, we need to get the value of the button
 
+let playerScore = 0;
+let computerScore = 0;
+
 
 for (let button of buttons) {
     button.addEventListener('click', function(){
         let playerGuess = hands.find((hand)=> hand.name === button.value);
         let computerGuess = getComputerGuess();
         console.log(playerGuess, computerGuess);
-        let compareGuess = compare(playerGuess, computerGuess)
-        console.log(compareGuess);
+        let compareGuess = compare(playerGuess, computerGuess);
+
+        updateScore(compareGuess)
+        console.log(playerScore, computerScore);
+        if(playerScore === 10 || computerScore === 10) {
+          alert('Game Over')
+        }
         
     });
 };
@@ -72,9 +80,19 @@ function compare(playerGuess, computerGuess) {
     return result;
 }
 // If computer wins, add to the computers score
-
 // If player wins, add to the players score
 // If it is a tie we do nothing
 // Update the score
+
+function updateScore(winner) {
+  if(winner === 'player') {
+    playerScore++;
+    playerScoreDisplay.innerText = playerScore;
+  }
+  displayResult()
+  setTimeout(() => {
+    displayResult()
+  }, 1500)
+}
 // If player has a score 10 we have a winner
 // Allow the user to reset the game
