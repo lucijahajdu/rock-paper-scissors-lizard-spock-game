@@ -136,3 +136,12 @@ document.getElementById('scoreArea').innerHTML =
 // If player has a score 10 we have a winner
 // Allow the user to reset the game
 
+function restartGame() {
+  scoreboard.player = 0;
+  scoreboard.computer= 0;
+  score.innerHTML = `
+  <p>Player: 0</p>
+  <p>Computer: 0</p>
+    `;
+}
+
