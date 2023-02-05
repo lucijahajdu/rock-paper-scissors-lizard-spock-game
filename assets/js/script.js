@@ -8,27 +8,27 @@ const icon = document.getElementById('icon');
 
 const hands = [{
     name: 'rock',
-    beats: ['scissors', 'lizard']
+    beats: ['scissors', 'lizard'],
     icon: 'fa-solid fa-hand-back-fist'
 },
 {
     name: 'paper',
-    beats: ['rock', 'spock']
+    beats: ['rock', 'spock'],
     icon: 'fa-solid fa-hand'
 },
 {
     name: 'scissors',
-    beats: ['paper', 'lizard']
+    beats: ['paper', 'lizard'],
     icon: 'fa-solid fa-scissors'
 },
 {
     name: 'lizard',
-    beats: ['paper', 'spock']
+    beats: ['paper', 'spock'],
     icon: 'fa-solid fa-hand-lizard'
 },
 {
     name: 'spock',
-    beats: ['rock', 'scissors']
+    beats: ['rock', 'scissors'],
     icon: 'fa-solid fa-hand-spock'
 }
 ];
@@ -60,42 +60,17 @@ function getComputerGuess() {
 // Compare the players and computers choice
 
 function compare(playerGuess, computerGuess) {
-    console.log(playerGuess, computerGuess);
-    if (computerGuess === playerGuess) {
-        alert = 'Tie!'
-    } else if (playerGuess === 'rock') {
-        if (computerGuess === 'paper') {
-          return 'computer';
-        } else {
-          return 'player';
-        }
-      } else if (playerGuess === 'paper') {
-        if (computerGuess === 'scissors') {
-          return 'computer';
-        } else {
-          return 'player';
-        }
-      } else if (playerGuess === 'scissors') {
-        if (computerGuess === 'rock') {
-          return 'computer';
-        } else {
-          return 'player';
-        } 
-      } else if (playerGuess === 'spock') {
-        if (computerGuess === 'rock') {
-          return 'computer';
-        } else {
-          return 'player';
-        } 
-      } else if (playerGuess === 'lizard') {
-        if (computerGuess === 'paper') {
-          return 'computer';
-        } else {
-          return 'player';
-        } 
-      } 
-      }
+    let result = '';
+    if (playerGuess.name === computerGuess.name){
+      result = 'tie'
+    } else if (playerGuess.beats.includes(computerGuess.name)){
+      result = 'player wins'
+    } else {
+      result = 'computer wins'
+    }
 
+    return result;
+}
 // If computer wins, add to the computers score
 
 // If player wins, add to the players score
