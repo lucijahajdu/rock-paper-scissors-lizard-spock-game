@@ -1,5 +1,5 @@
 // Assign the buttons to variable
-const buttons = document.getElementsByClassName('button');
+const buttons = document.getElementsByClassName('button')
 const hands = [{
     name: 'rock',
     beats: ['scissors', 'lizard']
@@ -82,10 +82,23 @@ function compare(playerGuess, computerGuess) {
         } else {
           return 'player';
         } 
+      } else if (playerGuess === 'spock') {
+        if (computerGuess === 'rock') {
+          return 'computer';
+        } else {
+          return 'player';
+        } 
+      } else if (playerGuess === 'lizard') {
+        if (computerGuess === 'paper') {
+          return 'computer';
+        } else {
+          return 'player';
+        } 
       } 
       }
-}
+
 // If computer wins, add to the computers score
+
 // If player wins, add to the players score
 // If it is a tie we do nothing
 // Update the score
