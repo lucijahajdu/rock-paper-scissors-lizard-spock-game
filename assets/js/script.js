@@ -7,6 +7,13 @@ const outcome = document.getElementById('outcome');
 const icon = document.getElementById('icon');
 const computerOutcome = document.getElementById('computerHand');
 
+const score = document.getElementById('scoreArea');
+
+const scoreboard = {
+  player: 0,
+  computer: 0,
+}
+
 
 const hands = [{
     name: 'rock',
@@ -36,8 +43,7 @@ const hands = [{
 ];
 // When the user clicks the button, we need to get the value of the button
 
-let playerScore = '';
-let computerScore = '';
+
 
 
 for (let button of buttons) {
@@ -49,8 +55,8 @@ for (let button of buttons) {
         
         
 
-        const updateScore = setResult(playerGuess.icon, computerGuess.hand, compareGuess)
-        updateScore(compareGuess)
+        let updateScore = setResult(playerGuess.icon, computerGuess.hand, compareGuess);
+        updateScore(compareGuess);
         console.log(playerScore, computerScore);
         if(playerScore === 10 || computerScore === 10) {
           alert('Game Over')
@@ -98,23 +104,35 @@ function updateScore(winner) {
   if (winner === 'player') {
     playerScore++;
     playerScoreDisplay.innerText = playerScore;
+    // Show modal result
+    resultArea.innerHTML = `
+    <h1 class="text-win">You win!</h1>
+    <i class="fa-solid fa-hand-back-${getComputerGuess}" ></i>
+    <p>Computer chose <strong>${getComputerGuess}</strong></p>`
   } else if (winner === 'computer') {
     computerScore++;
     computerScoreDisplay.innerText = computerScore;
+    resultArea.innerHTML = `
+    <h1 class="text-lose">You lose!</h1>
+    <i class="fa-solid fa-hand-back-${getComputerGuess}" ></i>
+    <p>Computer chose <strong>${getComputerGuess}</strong></p>`
+  } else {
+    resultArea.innerHTML = `
+    <h1 class="text-lose">It's a draw!!</h1>
+    <i class="fa-solid fa-hand-back-${getComputerGuess}" ></i>
+    <p>Computer chose <strong>${getComputerGuess}</strong></p>`
+
   }
   
 }
 
+document.getElementById('scoreArea').innerHTML =
+    `<p>Player: ${scoreboard.player}</p>
+    <p>Computer: ${scoreboard.computer}</p>`;
+
+  outcome.style.display = 'block';
+
+
 // If player has a score 10 we have a winner
 // Allow the user to reset the game
-
-function setResult(playerIcon, computerChoice, result) {
-  icon.innerHTML = `<i class="${playerIcon}"></i>`;
-  computerOutcome.innerText = `Computer chose ${computerChoice}`;
-  outcome.innerText = `${result} wins!`;
-}
-
-function displayResult() {
-  resultArea.classList.contains('hide') ? resultArea.classList.remove('hide') : resultArea.classList.add('hide');
-}
 
