@@ -65,7 +65,7 @@ body {
 
   /* result area -visible when result is displayed*/
 
-  .result-area {
+  .outcome {
     display: none;
     position: fixed;
     z-index: 1;

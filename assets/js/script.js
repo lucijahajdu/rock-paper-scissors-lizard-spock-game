@@ -41,6 +41,7 @@ for (let button of buttons) {
         let computerGuess = getComputerGuess();
         console.log(playerGuess, computerGuess);
         let compareGuess = compare(playerGuess, computerGuess)
+        console.log(compareGuess);
         
     });
 };
@@ -49,23 +50,9 @@ for (let button of buttons) {
 // Let the computer guess
 
 function getComputerGuess() {
-    const randomNumber = hands[Math.floor(Math.random() * 5) + 1]
+    const computerHand = hands[Math.floor(Math.random() * 5)]
 
-    if (randomNumber === 1) {
-        computerGuess = 'rock'
-      }
-      if (randomNumber === 2) {
-        computerGuess = 'scissors'
-      }
-      if (randomNumber === 3) {
-        computerChoice = 'paper'
-      }
-      if (randomNumber === 4) {
-        computerGuess = 'lizard'
-      }
-      if (randomNumber === 5) {
-        computerChoice = 'spock'
-      }
+    return computerHand
 
     }
     
