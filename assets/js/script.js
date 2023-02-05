@@ -5,6 +5,7 @@ const computerScoreDisplay = document.getElementById('computerScore');
 const resultArea = document.getElementById('result');
 const outcome = document.getElementById('outcome');
 const icon = document.getElementById('icon');
+const computerOutcome = document.getElementById('computerHand')
 
 const hands = [{
     name: 'rock',
@@ -42,9 +43,10 @@ for (let button of buttons) {
     button.addEventListener('click', function(){
         let playerGuess = hands.find((hand)=> hand.name === button.value);
         let computerGuess = getComputerGuess();
-        console.log(playerGuess, computerGuess);
+        console.log(playerGuess.name, computerGuess.name);
         let compareGuess = compare(playerGuess, computerGuess);
 
+        setResult(playerGuess.icon, computerGuess.hand, compareGuess)
         updateScore(compareGuess)
         console.log(playerScore, computerScore);
         if(playerScore === 10 || computerScore === 10) {
@@ -88,11 +90,17 @@ function updateScore(winner) {
   if(winner === 'player') {
     playerScore++;
     playerScoreDisplay.innerText = playerScore;
+  } else if (winner ==='computer') {
+    computerScore++;
+    computerScoreDisplay.innerText = computerScore;
   }
-  displayResult()
-  setTimeout(() => {
-    displayResult()
-  }, 1500)
+  
 }
 // If player has a score 10 we have a winner
 // Allow the user to reset the game
+function setResult(playerIcon, computerChoice, result) {
+  icon.innerHTML = `<i class="${playerIcon}"></i>`
+  computerOutcome.innerText = `Computer chose ${computerChoice}`
+  outcome.innerText = `${result} wins!`
+}
+
