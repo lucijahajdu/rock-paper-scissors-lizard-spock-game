@@ -1,5 +1,11 @@
 // Assign the buttons to variable
-const buttons = document.getElementsByClassName('button')
+const buttons = document.getElementsByClassName('button');
+const playerScoreDisplay = document.getElementById('playerScore');
+const computerScoreDisplay = document.getElementById('computerScore');
+const resultArea = document.getElementById('result');
+const outcome = document.getElementById('outcome');
+const icon = document.getElementById('icon');
+
 const hands = [{
     name: 'rock',
     beats: ['scissors', 'lizard']
