@@ -49,7 +49,7 @@ for (let button of buttons) {
         
         
 
-        setResult(playerGuess.icon, computerGuess.hand, compareGuess)
+        const updateScore = setResult(playerGuess.icon, computerGuess.hand, compareGuess)
         updateScore(compareGuess)
         console.log(playerScore, computerScore);
         if(playerScore === 10 || computerScore === 10) {
@@ -104,15 +104,17 @@ function updateScore(winner) {
   }
   
 }
+
 // If player has a score 10 we have a winner
 // Allow the user to reset the game
-let playerIcon = '';
-let computerChoice = '';
-let result = '';
 
 function setResult(playerIcon, computerChoice, result) {
   icon.innerHTML = `<i class="${playerIcon}"></i>`;
   computerOutcome.innerText = `Computer chose ${computerChoice}`;
   outcome.innerText = `${result} wins!`;
+}
+
+function displayResult() {
+  resultArea.classList.contains('hide') ? resultArea.classList.remove('hide') : resultArea.classList.add('hide');
 }
 
