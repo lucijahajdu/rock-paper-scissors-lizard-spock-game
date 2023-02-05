@@ -3,22 +3,27 @@ const buttons = document.getElementsByClassName('button')
 const hands = [{
     name: 'rock',
     beats: ['scissors', 'lizard']
+    icon: 'fa-solid fa-hand-back-fist'
 },
 {
     name: 'paper',
     beats: ['rock', 'spock']
+    icon: 'fa-solid fa-hand'
 },
 {
     name: 'scissors',
     beats: ['paper', 'lizard']
+    icon: 'fa-solid fa-scissors'
 },
 {
     name: 'lizard',
     beats: ['paper', 'spock']
+    icon: 'fa-solid fa-hand-lizard'
 },
 {
     name: 'spock',
     beats: ['rock', 'scissors']
+    icon: 'fa-solid fa-hand-spock'
 }
 ];
 // When the user clicks the button, we need to get the value of the button
@@ -29,7 +34,8 @@ for (let button of buttons) {
         let playerGuess = hands.find((hand)=> hand.name === button.value);
         let computerGuess = getComputerGuess();
         console.log(playerGuess, computerGuess);
-        compare(playerGuess, computerGuess)
+        let compareGuess = compare(playerGuess, computerGuess)
+        
     });
 };
 
