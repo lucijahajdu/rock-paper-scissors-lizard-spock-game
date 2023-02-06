@@ -55,7 +55,7 @@ for (let button of buttons) {
         
         
 
-        let updateScore = setResult(playerGuess.icon, computerGuess.hand, compareGuess);
+        setResult=(playerGuess.icon, computerGuess.hand, compareGuess);
         updateScore(compareGuess);
         console.log(playerScore, computerScore);
         if(playerScore === 10 || computerScore === 10) {
