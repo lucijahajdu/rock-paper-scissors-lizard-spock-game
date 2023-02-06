@@ -6,6 +6,7 @@ const resultArea = document.getElementById('result');
 const outcome = document.getElementById('outcome');
 const icon = document.getElementById('icon');
 const computerOutcome = document.getElementById('computerHand');
+const restartButton = document.getElementById('restart');
 
 const score = document.getElementById('scoreArea');
 
@@ -124,11 +125,11 @@ function updateScore(winner) {
   
 }
 
-document.getElementById('scoreArea').innerHTML =
-    `<p>Player: ${playerScore}</p>
-    <p>Computer: ${computerScore}</p>`;
-
-  outcome.style.display = 'block';
+// Set the score
+function setScore() {
+  playerScoreDisplay.innerHTML = playerScore;
+  computerScoreDisplay.innerHTML = computerScore;
+}
 
 
 // If player has a score 10 we have a winner
@@ -137,9 +138,8 @@ document.getElementById('scoreArea').innerHTML =
 function restartGame() {
   playerScore = 0;
   computerScore= 0;
-  score.innerHTML = `
-  <p>Player: 0</p>
-  <p>Computer: 0</p>
-    `;
+  setScore();
 }
+
+restartButton.addEventListener('click', restartGame);
 
