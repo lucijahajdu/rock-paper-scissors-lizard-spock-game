@@ -51,23 +51,23 @@ body {
     padding: 2%;
     width: 30%;
     font-size: 180%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+   
   }
+
+  
  
   footer{
     text-align: center;
     font-size: 150%;
     background-color: #71c5c1;
     padding: 2%;
-   margin-top: 2%;
+    margin-top: 2%;
   }
 
   /* result area -visible when result is displayed*/
   
 
   .outcome {
-    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
