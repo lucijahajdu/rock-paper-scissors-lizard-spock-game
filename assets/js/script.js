@@ -9,10 +9,8 @@ const computerOutcome = document.getElementById('computerHand');
 
 const score = document.getElementById('scoreArea');
 
-const scoreboard = {
-  player: 0,
-  computer: 0,
-}
+let playerScore = 0;
+let computerScore = 0;
 
 
 const hands = [{
@@ -102,8 +100,8 @@ function compare(playerGuess, computerGuess) {
 
 function updateScore(winner) {
   if (winner === 'player') {
-    playerScore++;
-    playerScoreDisplay.innerText = playerScore;
+  
+    playerScoreDisplay.innerText = playerScore++;
     // Show modal result
     resultArea.innerHTML = `
     <h1 class="text-win">You win!</h1>
@@ -127,8 +125,8 @@ function updateScore(winner) {
 }
 
 document.getElementById('scoreArea').innerHTML =
-    `<p>Player: ${scoreboard.player}</p>
-    <p>Computer: ${scoreboard.computer}</p>`;
+    `<p>Player: ${playerScore}</p>
+    <p>Computer: ${computerScore}</p>`;
 
   outcome.style.display = 'block';
 
@@ -137,8 +135,8 @@ document.getElementById('scoreArea').innerHTML =
 // Allow the user to reset the game
 
 function restartGame() {
-  scoreboard.player = 0;
-  scoreboard.computer= 0;
+  playerScore = 0;
+  computerScore= 0;
   score.innerHTML = `
   <p>Player: 0</p>
   <p>Computer: 0</p>
