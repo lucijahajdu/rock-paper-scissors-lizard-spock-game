@@ -56,10 +56,14 @@ body {
 
   footer{
     text-align: center;
-    font-size: 150%;
+    font-size: 130%;
     background-color: #71c5c1;
     padding: 2%;
     margin-top: 2%;
+  }
+
+  footer a {
+    color: #0c0c0c;
   }
 
   /* result area -visible when result is displayed*/
