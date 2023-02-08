@@ -46,7 +46,8 @@ for (let button of buttons) {
         let playerGuess = hands.find((hand)=> hand.name === button.value);
         let computerGuess = getComputerGuess();
         let compareGuess = compare(playerGuess, computerGuess);
-        
+
+        // If player has a score 10 we have a winner
         setResult = (playerGuess.icon, computerGuess.hand, compareGuess);
         updateScore(compareGuess, computerGuess);
         if(playerScore === 10 || computerScore === 10) {
@@ -126,7 +127,6 @@ function displayRoundResult() {
   resultContainer.classList.contains('hide') ? resultContainer.classList.remove('hide') : resultContainer.classList.add('hide');
 }
 
-// If player has a score 10 we have a winner
 // Allow the user to reset the game
 
 function restartGame() {
