@@ -8,6 +8,17 @@ Rock, Paper, Scissors, Lizard, Spock is extended version of the classic Rock, Pa
 * [About](#About)<a name="About"></a>
 * [User Stories](#User_Stories)<a name="User_Stories"></a>
 * [Features](#Features)<a name="Features"></a>
+  * [Header](#Header)<a name="Header"></a>
+  * [Game Logic](#Game_Logic)<a name="Game_Logic"></a>
+  * [Visual appereance](#Visual_appereance)<a name="Visual_appereance"></a>
+  * [Overlay screen & Results](#Overlay_screen_&_Results)<a name="Overlay screen & Results"></a>
+  * [Scores & Restart](#Scores_&_Restart)<a name="Scores & Restart"></a>
+  * [Footer](#Footer)<a name="Footer"></a>
+* [Future Features](#Future_Features)<a name="Future Features"></a>
+* [Typography and Color Scheme](#Typography_and_Color_Scheme)<a name="Typography and Color Scheme "></a>
+  * [Typography](#Typography)<a name="Typography"></a>
+  * [Color Scheme](#Color_Scheme)<a name="Color Scheme "></a>
+
 
 ## User Stories ##
  * As a user of the site I want to:
@@ -65,6 +76,105 @@ Color shade used in this game are:
 #333 Color Hex
 
 ![Colorshade of the icons](/assets/images/colorshadeblack.png)
+
+## Wireframes ##
+
+![Wireframes](/assets/images/mockup.png)
+
+## Technology ##
+* Used languages: [HTML](https://sv.wikipedia.org/wiki/HTML5 "HTML"), [CSS](https://sv.wikipedia.org/wiki/Cascading_Style_Sheets "CSS"), [JavaScript](https://sv.wikipedia.org/wiki/Cascading_Style_Sheets "Javascript").
+* Wireframe was made with [Figma](https://www.figma.com/ "Figma").
+* GitPod was used for writing the codes.
+* Github-to save and store the files for the website.
+* Chrome Dev Tools was used to modify website.
+* [Google Fonts](https://fonts.google.com/ "Google Fonts") was used to import the fonts used on the website.
+* [Font Awesome](https://fontawesome.com/ "Font Awesome") was used to for the iconography on the website.
+* Responsive Screenshot was made wit [Am I Responsive](https://ui.dev/amiresponsive "Am I Responsive")
+
+## Testing ##
+
+### Code Validation ###
+* HTML
+  * No errors were returned when passing through the official [W3C Validator](https://validator.w3.org/ "W3C Validator").
+* CSS
+  * No errors were found when passing through the official [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/ "Jigsaw W3 Validator").
+* Accessibility 
+  * Chosen colors and fonts are easy to read and accessible by running it through lighthouse in devtools.
+
+ ![Accessibility in Lighthouse](/assets/images/lighthous.png)
+ 
+ ### Test cases ###
+ All use cases are fullfiled from the list mentioned above at the user stories section.
+
+* Title is written in capital lettrs stating the game. 
+
+ ![Title](/assets/images/title.png)
+
+ * The icon shows the possible choices a user can make. Selecting an item starts the game.
+
+ ![Icons](/assets/images/icons.png)
+
+ * When a user votes, the following overlay appears with the computers choice and the result of this round stated if the user won or lost.
+
+ ![Popupwindow](/assets/images/popupwindow.png)
+
+ * The score tracks and shows the results for each round until the 10th round is reached.
+
+ ![Scores](/assets/images/scores.png)
+
+ * The game can be restarted any time, even before completing the 10th round. Tapping the button will reset the scores to zero.
+
+ ![Restart](/assets/images/restartbtn.png)
+
+ * The footer describes who is the creator of the game and a link to the Github via an icon.
+
+ ![Footer](/assets/images/footer.png)
+
+### Fixed bugs ###
+Class name in the HTML and Javascript(in score area) were not the same and code was showing the error. When realised it was correcter. 
+
+### Supported screens and browsers ###
+This website is suported in Google Chrome,Firefox and Microsoft Edge.
+The website is responsive to multiple screen sizes.
+
+## Deployment ##
+
+### Via gitpod ###
++ Repository in Github was created and named rock-paper-scissors-lizard-spock. The template Code-Institute-Org/gitpod-full-template was used.
++ Tapping on the green "gitpod" button Gitpod is open. 
++ To run HTML, CSS and Javascript type: python3 -m http.server.
++ A blue button should appear to click: Open Browser.
++ To save our code type git add ., git commit -m "" and git push to push our code to the GitHub
+### Via github pages ###
++ In the GitHub repository, navigate to the Settings tab
++ On the right side of the page push Pages
++ From the source section drop-down menu, select the Master Branch
++ Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+## Credits ##
+
+### Content ###
+
++ [This link](https://www.youtube.com/watch?v=WR_pWXJZiRY "On_this_link") was used to gain ideas for my project.
++ The footer idea was created based on a Code institute students [project](https://github.com/EmelieMarkkanen/p2-RockPaperScissorsLizardSpock "project").
+
+
+### External sources ###
+
++ [Stack Overflow](https://stackoverflow.com/ "Stack_Overflow")
++ [W3School](https://www.w3schools.com/ "W3School")
+
+### Aknowledgement ###
++ I would like to thank to my mentor Richard for supporting me with his patience, valuable input and feedback during this project.
+
+
+
+
+
+
+
+
+
 
 
 
