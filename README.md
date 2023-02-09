@@ -18,6 +18,21 @@ Rock, Paper, Scissors, Lizard, Spock is extended version of the classic Rock, Pa
 * [Typography and Color Scheme](#Typography_and_Color_Scheme)<a name="Typography and Color Scheme "></a>
   * [Typography](#Typography)<a name="Typography"></a>
   * [Color Scheme](#Color_Scheme)<a name="Color Scheme "></a>
+* [Wireframes](#Wireframes )<a name="Wireframes"></a>
+* [Technology](#Technology)<a name="Technology "></a>
+* [Testing](#Testing)<a name="Testing"></a>
+   * [Code Validation](#Code_Validation)<a name="Code Validation"></a>
+   * [Test cases](#Test_cases)<a name="Test cases"></a>
+   * [Fixed bugs](#Fixed_bugs)<a name="Fixed bugs"></a>
+   * [Supported screens and browsers](#Supported_screens_and_browsers)<a name="Test cases"></a>
+* [Deployment](#Deployment)<a name="Deployment"></a>
+  * [Via gitpod](#Via_gitpod)<a name="Via gitpod"></a>
+  * [Via github pages](#Via_github_pages)<a name="Via github pages"></a>
+* [Credits](#Credits)<a name="Credits"></a>
+  * [Content](#Content)<a name="Content"></a>
+  * [External sources](#External_sources)<a name="External sources"></a>
+  * [Aknowledgement](#Aknowledgement)<a name="External sources"></a>
+
 
 
 ## User Stories ##
