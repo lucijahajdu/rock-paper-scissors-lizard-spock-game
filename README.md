@@ -1,6 +1,6 @@
 # ROCK PAPER SCISSORS LIZARD SPOCK GAME #
 ## About ##
-Rock, Paper, Scissors, Lizard, Spock is extended version of the classic Rock, Paper, Scissors created by Sam Kass and Karen Bryla. The classic Rock, Paper, Scissors is often used as a fair choosing method in order to settle a dispute or make a group decison. This is a game of pure luck.But when you know someone well enough, classic games end up often in a tie. To reduce the probability the extended version Rock, Paper, Scissors, Lizard, Spock was invented. This game was used in the sitcom called The Big Bang Theory which made this game more popular.
+Rock, Paper, Scissors, Lizard, Spock is extended version of the classic Rock, Paper, Scissors created by Sam Kass and Karen Bryla. The classic Rock, Paper, Scissors is often used as a fair choosing method in order to settle a dispute or make a group decison. This is a game of pure luck. But when you know someone well enough, classic games end up often in a tie. To reduce the probability the extended version Rock, Paper, Scissors, Lizard, Spock was invented. This game was used in the sitcom called The Big Bang Theory which made this game more popular.
 
 ![Screenshot of the website](/assets/images/game.png)
 
@@ -37,14 +37,15 @@ Rock, Paper, Scissors, Lizard, Spock is extended version of the classic Rock, Pa
 
 ## User Stories ##
  * As a user of the site I want to:
-    * play a Rock, Paper, Scissors, Lizard, Spock game
+    * play a Rock, Paper, Scissors, Lizard, Spock
     * be able to play alone, against the computer
     * have multiple rounds in order to have a clear win/lose
     * know who wins each game and the final round
-    * be able to restart the game with a new count
+    * be able to restart the game
 ## Features ##
 ### Header ###
-At the top of the page, user can see 
+At the top of the page, user can see the title of the game
+
 ### Game Logic ##
 The logic is based on the game rules which are the following: 
 1. scissors cut paper
@@ -59,30 +60,30 @@ The logic is based on the game rules which are the following:
 10. rock crushes scissors
 
 ### Visual appereance ###
-Icons are used for each choice a user can select in order to visualaise the hand gestures.
+Icons are used for each possible choice in order to visualaise the hand gestures. These are the icons that can be selected in order to start a game.
 ### Overlay screen & Results ###
-After each choosen icon the overlay screen appears with the result.
-Final result appears after 10 round of won game from one of the players.
+After selecting an icon, the overlay screen appears with the result.
+Final result appears after 10 rounds of won game either from the user or the computer.
 ### Scores & Restart ###
 Scores appear after each round of the game.
-After each round or after a final round the game can be restarted via tapping the "Restart" button.
+After each round or after a final round, the game can be restarted when tapping the "Restart" button.
 ### Footer ###
-Footer shows informations of the creator and the github link.
+Footer shows information of the creator and a GitHub link.
 
 ## Future Features ##
-Design could be improved for better appereance. 
-In case we recive customer feedback a section could be added about the rules.
+In future, design of the screen could be improved for better appereance.
+In case we recive customer feedback, an additional section could be added with the rules explained.
 Possibility for two live players could be implemented in the future.
 
 ## Typography and Color Scheme ##
 
 ### Typography ###
-The font used for this website is called Ralleway and it was imported from Google fonts.
+The font used for this website is called Ralleway which was imported from Google fonts.
 All icons for the game were used from Font awesome.
 
 ### Color Scheme ###
-I chose simple clean design whit white background and turquoise sections to better distinguish informations.
-Color shade used in this game are:
+Design is simple and clean with white background and  turquoise sections to better distinguish between information.
+The following colour shades are used:
 
 #71c5c1 Color Hex
 
@@ -100,7 +101,7 @@ Color shade used in this game are:
 * Used languages: [HTML](https://sv.wikipedia.org/wiki/HTML5 "HTML"), [CSS](https://sv.wikipedia.org/wiki/Cascading_Style_Sheets "CSS"), [JavaScript](https://sv.wikipedia.org/wiki/Cascading_Style_Sheets "Javascript").
 * Wireframe was made with [Figma](https://www.figma.com/ "Figma").
 * GitPod was used for writing the codes.
-* Github-to save and store the files for the website.
+* Github was used to save and store files for the website.
 * Chrome Dev Tools was used to modify website.
 * [Google Fonts](https://fonts.google.com/ "Google Fonts") was used to import the fonts used on the website.
 * [Font Awesome](https://fontawesome.com/ "Font Awesome") was used to for the iconography on the website.
@@ -113,27 +114,29 @@ Color shade used in this game are:
   * No errors were returned when passing through the official [W3C Validator](https://validator.w3.org/ "W3C Validator").
 * CSS
   * No errors were found when passing through the official [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/ "Jigsaw W3 Validator").
+* JS Validator 
+  * No errors were found when passing through the official [JSHint Code Quality](https://jshint.com/ "JS hint").
 * Accessibility 
-  * Chosen colors and fonts are easy to read and accessible by running it through lighthouse in devtools.
+  * The chosen colours and fonts are easy to read and is accessible when running it through lighthouse in devtools.
 
  ![Accessibility in Lighthouse](/assets/images/lighthous.png)
  
  ### Test cases ###
- All use cases are fullfiled from the list mentioned above at the user stories section.
+ All requirements are fulfilled from the list mentioned above at the user stories section.
 
-* Title is written in capital lettrs stating the game. 
+* Title is written in capital lettrs stating the name of the game.
 
  ![Title](/assets/images/title.png)
 
- * The icon shows the possible choices a user can make. Selecting an item starts the game.
+ * The icon shows the possible choices a user can make. Selecting an item starts the game and hightights icon.
 
  ![Icons](/assets/images/icons.png)
 
- * When a user votes, the following overlay appears with the computers choice and the result of this round stated if the user won or lost.
+ * When a user votes, the following overlay appears and shows the computers choice and the result of the round, additionaly it states if the user won or lost.
 
  ![Popupwindow](/assets/images/popupwindow.png)
 
- * The score tracks and shows the results for each round until the 10th round is reached.
+ * The score section shows the results for each round until the 10th round is completed.
 
  ![Scores](/assets/images/scores.png)
 
@@ -146,10 +149,9 @@ Color shade used in this game are:
  ![Footer](/assets/images/footer.png)
 
 ### Fixed bugs ###
-Class name in the HTML and Javascript(in score area) were not the same and code was showing the error. When realised it was correcter. 
-
+Class name in the HTML and Javascript(in score area) were not the same and code was showing the error. The bug was corrected and resolved.
 ### Supported screens and browsers ###
-This website is suported in Google Chrome,Firefox and Microsoft Edge.
+This website was tested in the following browsers: Google Chrome, Firefox and Microsoft Edge.
 The website is responsive to multiple screen sizes.
 
 ## Deployment ##
